@@ -1,6 +1,5 @@
 import {Container} from './styles'
 import {AiFillStar, AiOutlineStar } from 'react-icons/ai'
-import { useState } from 'react'
 
 export function Stars({rating}){
     return(
