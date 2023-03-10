@@ -30,8 +30,8 @@ export const Profile = styled.div`
     > div{
         display: flex;
         flex-direction: column;
-        width: 80px;
-        text-align: end;
+        width: 120px;
+        align-items: flex-end;
         margin-right: 9px;
 
         span{

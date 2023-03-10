@@ -1,5 +1,7 @@
 import { Container, Content, LinkButton, Menu } from "./styles";
 
+import { useAuth } from "../../hooks/auth";
+
 import {FiPlus} from 'react-icons/fi'
 
 import { Header } from "../../components/Header";
@@ -7,6 +9,8 @@ import { Header } from "../../components/Header";
 import { MovieCard } from "../../components/MovieCard";
 
 export function Home(){
+
+    
     return(
         <Container>
             <Header/>

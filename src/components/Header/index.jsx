@@ -8,7 +8,7 @@ import { useAuth } from '../../hooks/auth';
 
 export function Header(){
 
-    const { signOut } = useAuth();
+    const { signOut, user } = useAuth();
 
     const navigate = useNavigate();
 
@@ -23,7 +23,7 @@ export function Header(){
         <Profile>
                 <div>
                     <LinkTag to="/profile">
-                    <strong>José Cássio</strong>
+                    <strong>{user.name}</strong>
                     </LinkTag>
                     <span onClick={handlesignOut}>Sair</span>
                 </div>
