@@ -22,15 +22,11 @@ export const Container = styled.div`
     border-bottom: 1px solid ${({theme})=> theme.COLORS.BACKGROUND_800};
 `
 
-export const Profile = styled(Link)`
+export const Profile = styled.div`
     display: flex;
     align-items: center;
 
-    >img{
-        width: 64px;
-        height: 64px;
-        border-radius: 50%;
-    }
+    
     > div{
         display: flex;
         flex-direction: column;
@@ -42,12 +38,24 @@ export const Profile = styled(Link)`
             font-size: 14px;
             color: ${({theme}) => theme.COLORS.GRAY_100};
         }
+    }
 
-        strong{
+`
+
+export const LinkTag = styled(Link)`
+     display: flex;
+     align-items: center;
+
+     >img{
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+    }
+
+    strong{
             font-size: 14px;
             font-weight: 700;
             color: ${({theme}) => theme.COLORS.WHITE};
         }
-    }
 `
 
