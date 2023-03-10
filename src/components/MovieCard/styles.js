@@ -9,9 +9,15 @@ export const Container = styled.div`
     border-radius: 10px;
 
     margin-top: 24px;
+
     
     > div{
         margin-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        
     }
     > p {
         overflow: hidden; 

@@ -78,7 +78,7 @@ export const Menu = styled.ul`
     list-style: none;
 
     overflow-y: auto;
-    padding: 5px;
+    padding: 5px 10px;
 
     margin-bottom: 20px;
 `
