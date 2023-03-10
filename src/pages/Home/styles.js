@@ -79,4 +79,6 @@ export const Menu = styled.ul`
 
     overflow-y: auto;
     padding: 5px;
+
+    margin-bottom: 20px;
 `

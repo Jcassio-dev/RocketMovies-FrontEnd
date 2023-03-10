@@ -1,8 +1,21 @@
+import { useNavigate } from 'react-router-dom';
+
 import { Container, Profile, LinkTag } from './styles'
 
-import { Input } from '../Input'
+import { Input } from '../Input';
+
+import { useAuth } from '../../hooks/auth';
 
 export function Header(){
+
+    const { signOut } = useAuth();
+
+    const navigate = useNavigate();
+
+   function handlesignOut(){
+        navigate("/")
+        signOut();
+    }
     return(
     <Container>
         <h1>RocketMovies</h1>
@@ -12,7 +25,7 @@ export function Header(){
                     <LinkTag to="/profile">
                     <strong>José Cássio</strong>
                     </LinkTag>
-                    <span>Sair</span>
+                    <span onClick={handlesignOut}>Sair</span>
                 </div>
                 <LinkTag to="/profile">
                  <img 
