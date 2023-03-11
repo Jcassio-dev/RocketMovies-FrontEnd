@@ -35,6 +35,12 @@ export const Top = styled.div`
     flex-direction: column;
     gap: 24px;
 
+    .Buttons{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
     .Title{
         display: flex;
         align-items: baseline;

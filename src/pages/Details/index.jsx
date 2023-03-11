@@ -1,6 +1,6 @@
 import { Container, Content, Top } from "./styles";
 
-import { FiArrowLeft, FiClock } from "react-icons/fi";
+import { FiArrowLeft, FiClock, FiTrash2 } from "react-icons/fi";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
@@ -13,6 +13,7 @@ import { api } from "../../services/api";
 import { useAuth } from "../../hooks/auth";
 
 import avatarPlaceholder from "../../assets/avatar_placeholder.svg";
+import { toast } from "react-toastify";
 
 
 export function Details() {
@@ -29,6 +30,18 @@ export function Details() {
         navigate(-1)
     }
 
+    async function handleExcludeFilm(){
+        const confirm = window.confirm(`Deseja excluir a nota do filme '${data.title}'?`);
+
+        if(!confirm){
+            return
+        }
+
+        await api.delete(`notes/${params.id}`);
+        handleBack()
+        toast.success("Filme excluído com sucesso")
+    }
+
     useEffect(()=> {
         async function fetchNote(){
             const response = await api.get(`notes/${params.id}`)
@@ -43,8 +56,11 @@ export function Details() {
             <Header/>
             <Content>
                 <Top>
+                    <div className="Buttons">
                     <ButtonText title="Voltar" icon={FiArrowLeft} onClick={handleBack}/>
-                    
+                    <ButtonText title="Excluir" icon={FiTrash2} onClick={handleExcludeFilm}/>
+                    </div>
+
                     <div className="Title">
                         <h1>{data.title}</h1>
                         <Stars rating={data.rating}/>
@@ -54,7 +70,7 @@ export function Details() {
                         <img src={avatarUrl} alt="Foto do Perfil" />
                         <p>Por {user.name}</p>
                         <FiClock/>
-                        <p>{data.created_at}</p>
+                        <p>{data.updated_at}</p>
                     </div>
                 </Top>
                 <div>
