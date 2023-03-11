@@ -5,7 +5,7 @@ import { api } from "../../services/api";
 import {FiPlus} from 'react-icons/fi'
 
 import { Header } from "../../components/Header";
-import { Input } from "../../components/Input";
+
 
 import { MovieCard } from "../../components/MovieCard";
 import { useEffect, useState } from "react";
@@ -24,9 +24,7 @@ export function Home(){
     }, [search])
     return(
         <Container>
-            <Header>
-                <Input placeholder="Pesquisar pelo titulo" onChange={e => setSearch(e.target.value)}/>
-            </Header>
+            <Header onChange={e => setSearch(e.target.value)}/>
             <Content>
                 <div>
                     <h1>Meus filmes</h1> 
