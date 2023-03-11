@@ -10,6 +10,9 @@ export const Container = styled.div`
 
     margin-top: 24px;
 
+    cursor: pointer;
+
+    transition: 200ms;
     
     > div{
         margin-bottom: 15px;
@@ -31,5 +34,9 @@ export const Container = styled.div`
         color: ${({theme}) => theme.COLORS.GRAY_100};
 
         margin-bottom: 25px;
+    }
+
+    &:hover{
+        filter: brightness(1.1);
     }
 `

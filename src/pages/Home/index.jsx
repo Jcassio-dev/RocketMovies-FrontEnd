@@ -10,9 +10,17 @@ import { Header } from "../../components/Header";
 import { MovieCard } from "../../components/MovieCard";
 import { useEffect, useState } from "react";
 
+import { useNavigate } from "react-router-dom";
+
 export function Home(){
     const [search, setSearch] = useState("");
     const [notes, setNotes] = useState([]);
+
+    const navigate = useNavigate();
+    
+    function handleDetails(id){
+        navigate(`details/${id}`)
+    }
     
     useEffect(()=> {
         async function fetchNotes(){
@@ -38,6 +46,7 @@ export function Home(){
                             <MovieCard
                             key={String(note.id)}
                             data={note}
+                            onClick={() => handleDetails(note.id)}
                             />
                         ))
                     }
