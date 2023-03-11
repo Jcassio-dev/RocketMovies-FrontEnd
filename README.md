@@ -11,6 +11,10 @@ Explorer - Stage 09 - Front-End for the RocketMovies Web App
 
 
 
+https://user-images.githubusercontent.com/62391659/224471523-d158ee3e-38d6-4150-860a-9786af8d5ae3.mp4
+
+
+
 </div>
 <div id="Description">
 
