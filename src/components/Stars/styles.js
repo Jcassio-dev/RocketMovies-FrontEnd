@@ -7,5 +7,4 @@ export const Container = styled.div`
     color: ${({theme})=> theme.COLORS.PINK};
     gap: 3px;
 
-    margin-left: 3px;
 `
