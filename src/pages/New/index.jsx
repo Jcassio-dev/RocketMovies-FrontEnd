@@ -8,18 +8,23 @@ import {ButtonText} from '../../components/ButtonText';
 import {Input} from '../../components/Input';
 import { Textarea } from "../../components/Textarea";
 import { NoteItem } from "../../components/NoteItem";
+import { useState } from "react";
 
 export function New(){
+    const [title, setTitle] = useState("");
+    const [rating, setRating] = useState(0)
+    const [description, setDescription] = useState("");
+
     return(
         <Container>
             <Header/>
             <Form>
-                <ButtonText icon={FiArrowLeft} title="Voltar" link="/"/>
+                <ButtonText icon={FiArrowLeft} title="Voltar" link={-1}/>
                 <h1>Novo filme</h1>
 
                 <div className="Wrapper">
                     <Input placeholder="Título"/>
-                    <Input placeholder="Sua nota (de 0 a 5)"/>
+                    <Input placeholder="Sua nota (de 0 a 5)" type="number"/>
                 </div>
 
                 <Textarea placeholder="Observação"/>
