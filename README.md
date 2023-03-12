@@ -61,7 +61,7 @@ Figma Design:
 #### Clone this repository
 
 ```bash
-$ git clone <https://github.com/Jcassio-dev/RocketMovies-FrontEnd.git>
+$ git clone https://github.com/Jcassio-dev/RocketMovies-FrontEnd.git
 ```
 
 #### Access project folder in terminal/cmd
